@@ -16,6 +16,8 @@
 		71454015242F3ACB009185B6 /* CreditosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71454014242F3ACB009185B6 /* CreditosViewController.swift */; };
 		71454017242FDC75009185B6 /* comoJogarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71454016242FDC75009185B6 /* comoJogarViewController.swift */; };
 		71589C6F243EAB3D00EFBEFA /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71589C6E243EAB3D00EFBEFA /* DAO.swift */; };
+		71589C71243F933C00EFBEFA /* ImagensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71589C70243F933C00EFBEFA /* ImagensViewController.swift */; };
+		71589C73243F935000EFBEFA /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71589C72243F935000EFBEFA /* CollectionViewCell.swift */; };
 		718554C9243B554C00AECBD1 /* JogadoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718554C8243B554C00AECBD1 /* JogadoresViewController.swift */; };
 		718554CD243B66F100AECBD1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718554CC243B66F100AECBD1 /* TableViewCell.swift */; };
 		718554CF243BEDE300AECBD1 /* ConfirmaIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718554CE243BEDE300AECBD1 /* ConfirmaIDViewController.swift */; };
@@ -37,6 +39,8 @@
 		71454014242F3ACB009185B6 /* CreditosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditosViewController.swift; sourceTree = "<group>"; };
 		71454016242FDC75009185B6 /* comoJogarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = comoJogarViewController.swift; sourceTree = "<group>"; };
 		71589C6E243EAB3D00EFBEFA /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
+		71589C70243F933C00EFBEFA /* ImagensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagensViewController.swift; sourceTree = "<group>"; };
+		71589C72243F935000EFBEFA /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		718554C8243B554C00AECBD1 /* JogadoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogadoresViewController.swift; sourceTree = "<group>"; };
 		718554CC243B66F100AECBD1 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		718554CE243BEDE300AECBD1 /* ConfirmaIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmaIDViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 				718554D0243CA72B00AECBD1 /* PerguntasViewController.swift */,
 				71454000242E9593009185B6 /* SceneDelegate.swift */,
 				718554CC243B66F100AECBD1 /* TableViewCell.swift */,
+				71589C70243F933C00EFBEFA /* ImagensViewController.swift */,
+				71589C72243F935000EFBEFA /* CollectionViewCell.swift */,
 				71454002242E9593009185B6 /* ViewController.swift */,
 				718554D6243D644D00AECBD1 /* Model */,
 				71454004242E9593009185B6 /* Main.storyboard */,
@@ -177,9 +183,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				718554C9243B554C00AECBD1 /* JogadoresViewController.swift in Sources */,
+				71589C71243F933C00EFBEFA /* ImagensViewController.swift in Sources */,
 				71454003242E9593009185B6 /* ViewController.swift in Sources */,
 				71453FFF242E9593009185B6 /* AppDelegate.swift in Sources */,
 				718554D3243CA83600AECBD1 /* PerguntasTableViewCell.swift in Sources */,
+				71589C73243F935000EFBEFA /* CollectionViewCell.swift in Sources */,
 				71454001242E9593009185B6 /* SceneDelegate.swift in Sources */,
 				718554D8243D64AF00AECBD1 /* Jogador.swift in Sources */,
 				718554CF243BEDE300AECBD1 /* ConfirmaIDViewController.swift in Sources */,

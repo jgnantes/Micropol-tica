@@ -14,6 +14,7 @@ class PerguntasViewController: UIViewController, UITableViewDelegate, UITableVie
     var vetorPerguntas: [Perguntas] = []
     var receptor = 0
     
+    
     var jogadorAtual:Jogador = jogadores[DAO.instance.indJogadorAtual]
     
     @IBOutlet weak var TableViewPerguntas: UITableView!
@@ -36,35 +37,12 @@ class PerguntasViewController: UIViewController, UITableViewDelegate, UITableVie
             self.navigationController?.pushViewController(controller, animated: true)
         }
         
-    }
-    
-    
-    
-    func vetorTipos(dicionario: [String: [String]]) -> [String] {
-        var vetor: [String] = []
-        
-        for item in dicionario{
-            vetor.append(item.key)
+        for item in jogadorAtual.respostas {
+            print(item.resposta)
         }
         
-        return vetor
     }
     
-    
-    func pegaPerguntas(dicionario: [String: [String]], tipos: [String]) -> (classe: Perguntas, vetor: [String]) {
-        var tipos2 = tipos
-        var pergunta = Perguntas(Texto: "", Tipo: "")
-        var receptaculo = ""
-        
-        receptaculo = tipos2.randomElement()!
-        
-        pergunta.tipo = receptaculo
-        pergunta.texto = dicionario[receptaculo]?.randomElement() as! String
-        
-        tipos2.remove(at: tipos2.firstIndex(of: receptaculo)!)
-        
-        return(pergunta, tipos2)
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 8
@@ -87,11 +65,9 @@ class PerguntasViewController: UIViewController, UITableViewDelegate, UITableVie
         self.navigationItem.hidesBackButton = true
         
         BotaoTerminei.layer.borderWidth = 1
-        BotaoTerminei.layer.borderColor = UIColor.lightGray.cgColor
+        BotaoTerminei.layer.borderColor = UIColor.black.cgColor
         BotaoTerminei.layer.cornerRadius = 5
-        BotaoTerminei.setTitleColor(.lightGray, for: .normal)
-        
-        tipos = vetorTipos(dicionario: PerguntasDIC)
+        BotaoTerminei.setTitleColor(.black, for: .normal)
         
     }
     

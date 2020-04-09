@@ -11,6 +11,7 @@ import Foundation
 class Jogador{
     var nome: String
     var respostas: [Perguntas] = []
+    var imagem: String = "lucas"
     
     init(Nome: String) {
         self.nome = Nome

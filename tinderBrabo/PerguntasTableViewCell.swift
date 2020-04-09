@@ -26,10 +26,4 @@ class PerguntasTableViewCell: UITableViewCell {
         PerguntaOTL.text = jogadorAtual.respostas[indPergunta].texto
     }
     
-//    func ativaInteracao(){
-//        if jogadorAtual.respostas.count == 6 {
-//
-//        }
-//    }
-    
 }

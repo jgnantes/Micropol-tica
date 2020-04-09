@@ -13,7 +13,7 @@ import Foundation
 class Perguntas{
     var texto: String
     var tipo: String
-    var resposta: Int = 0
+    var resposta: Int = 1
     
     init(Texto: String, Tipo: String) {
         self.texto = Texto
