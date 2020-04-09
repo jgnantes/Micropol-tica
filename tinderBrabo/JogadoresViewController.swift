@@ -8,8 +8,6 @@
 
 import UIKit
 
-var jogadores: [Jogadores] = []
-
 //apenas um teste
 
 
@@ -21,17 +19,17 @@ class JogadoresViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var AdicionaOTL: UIButton!
     
     @IBAction func AdicionaBotao(_ sender: UIButton) {
-        if TextoCampo.text != ""{
-            var novoJogador = Jogadores(Nome: TextoCampo.text!)
-            jogadores.append(novoJogador)
+        guard let nomeJogador = TextoCampo.text,
+              !nomeJogador.isEmpty else { return }
+                
+
+            let novoJogador = Jogador(Nome: nomeJogador)
+            DAO.instance.jogadores.append(novoJogador)
+        
             TextoCampo.text = ""
             TableViewOTL.reloadData()
             
-            for item in jogadores{
-                print(item.nome)
-            }
-            print("\n\n")
-        }
+        
         if jogadores.count == 3 {
             ConfirmarBotao.layer.borderColor = UIColor.black.cgColor
             ConfirmarBotao.setTitleColor(.black, for: .normal)
@@ -45,6 +43,7 @@ class JogadoresViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     @IBAction func BotaoAcao(_ sender: UIButton) {
+        DAO.instance.indJogadorAtual = 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -68,8 +67,8 @@ class JogadoresViewController: UIViewController, UITableViewDelegate, UITableVie
             
             if jogadores.count == 2 {
                 ConfirmarBotao.isUserInteractionEnabled = false
-                ConfirmarBotao.layer.borderColor = UIColor.white.cgColor
-                ConfirmarBotao.setTitleColor(.white, for: .normal)
+                ConfirmarBotao.layer.borderColor = UIColor.lightGray.cgColor
+                ConfirmarBotao.setTitleColor(.lightGray, for: .normal)
             }
             
             else if jogadores.count == 5 {
@@ -82,8 +81,8 @@ class JogadoresViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func setupUI(){
         ConfirmarBotao.layer.borderWidth = 1
-        ConfirmarBotao.layer.borderColor = UIColor.white.cgColor
-        ConfirmarBotao.setTitleColor(.white, for: .normal)
+        ConfirmarBotao.layer.borderColor = UIColor.lightGray.cgColor
+        ConfirmarBotao.setTitleColor(.lightGray, for: .normal)
         ConfirmarBotao.layer.cornerRadius = 5
         
         AdicionaOTL.layer.borderWidth = 1

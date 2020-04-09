@@ -216,6 +216,9 @@
                                                         <segment title="5"/>
                                                         <segment title="6"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="scChanged:" destination="qDR-oN-ngc" eventType="valueChanged" id="rtd-sP-6KF"/>
+                                                    </connections>
                                                 </segmentedControl>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pergunta" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQM-yA-gxy">
                                                     <rect key="frame" x="20" y="11" width="374" height="157"/>

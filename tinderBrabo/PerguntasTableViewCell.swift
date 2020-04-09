@@ -10,7 +10,26 @@ import UIKit
 
 class PerguntasTableViewCell: UITableViewCell {
 
+    var indPergunta = 0
+    var jogadorAtual:Jogador = jogadores[DAO.instance.indJogadorAtual]
+    
     @IBOutlet weak var PerguntaOTL: UILabel!
     
+    @IBAction func scChanged(_ sender: UISegmentedControl) {
+
+        jogadorAtual.respostas[indPergunta].resposta = sender.selectedSegmentIndex + 1
+    }
+    
+    func decorate(from jogadorAtual:Jogador, indPergunta:Int) {
+        self.jogadorAtual = jogadorAtual
+        self.indPergunta = indPergunta
+        PerguntaOTL.text = jogadorAtual.respostas[indPergunta].texto
+    }
+    
+//    func ativaInteracao(){
+//        if jogadorAtual.respostas.count == 6 {
+//
+//        }
+//    }
     
 }

@@ -15,12 +15,13 @@
 		7145400B242E9598009185B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71454009242E9598009185B6 /* LaunchScreen.storyboard */; };
 		71454015242F3ACB009185B6 /* CreditosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71454014242F3ACB009185B6 /* CreditosViewController.swift */; };
 		71454017242FDC75009185B6 /* comoJogarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71454016242FDC75009185B6 /* comoJogarViewController.swift */; };
+		71589C6F243EAB3D00EFBEFA /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71589C6E243EAB3D00EFBEFA /* DAO.swift */; };
 		718554C9243B554C00AECBD1 /* JogadoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718554C8243B554C00AECBD1 /* JogadoresViewController.swift */; };
 		718554CD243B66F100AECBD1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718554CC243B66F100AECBD1 /* TableViewCell.swift */; };
 		718554CF243BEDE300AECBD1 /* ConfirmaIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718554CE243BEDE300AECBD1 /* ConfirmaIDViewController.swift */; };
 		718554D1243CA72B00AECBD1 /* PerguntasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718554D0243CA72B00AECBD1 /* PerguntasViewController.swift */; };
 		718554D3243CA83600AECBD1 /* PerguntasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718554D2243CA83600AECBD1 /* PerguntasTableViewCell.swift */; };
-		718554D8243D64AF00AECBD1 /* Jogadores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718554D7243D64AF00AECBD1 /* Jogadores.swift */; };
+		718554D8243D64AF00AECBD1 /* Jogador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718554D7243D64AF00AECBD1 /* Jogador.swift */; };
 		718554DA243D674700AECBD1 /* Perguntas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718554D9243D674700AECBD1 /* Perguntas.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,12 +36,13 @@
 		7145400C242E9598009185B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71454014242F3ACB009185B6 /* CreditosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditosViewController.swift; sourceTree = "<group>"; };
 		71454016242FDC75009185B6 /* comoJogarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = comoJogarViewController.swift; sourceTree = "<group>"; };
+		71589C6E243EAB3D00EFBEFA /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		718554C8243B554C00AECBD1 /* JogadoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogadoresViewController.swift; sourceTree = "<group>"; };
 		718554CC243B66F100AECBD1 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		718554CE243BEDE300AECBD1 /* ConfirmaIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmaIDViewController.swift; sourceTree = "<group>"; };
 		718554D0243CA72B00AECBD1 /* PerguntasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerguntasViewController.swift; sourceTree = "<group>"; };
 		718554D2243CA83600AECBD1 /* PerguntasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerguntasTableViewCell.swift; sourceTree = "<group>"; };
-		718554D7243D64AF00AECBD1 /* Jogadores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jogadores.swift; sourceTree = "<group>"; };
+		718554D7243D64AF00AECBD1 /* Jogador.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jogador.swift; sourceTree = "<group>"; };
 		718554D9243D674700AECBD1 /* Perguntas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perguntas.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,8 +98,9 @@
 		718554D6243D644D00AECBD1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				718554D7243D64AF00AECBD1 /* Jogadores.swift */,
+				718554D7243D64AF00AECBD1 /* Jogador.swift */,
 				718554D9243D674700AECBD1 /* Perguntas.swift */,
+				71589C6E243EAB3D00EFBEFA /* DAO.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,12 +181,13 @@
 				71453FFF242E9593009185B6 /* AppDelegate.swift in Sources */,
 				718554D3243CA83600AECBD1 /* PerguntasTableViewCell.swift in Sources */,
 				71454001242E9593009185B6 /* SceneDelegate.swift in Sources */,
-				718554D8243D64AF00AECBD1 /* Jogadores.swift in Sources */,
+				718554D8243D64AF00AECBD1 /* Jogador.swift in Sources */,
 				718554CF243BEDE300AECBD1 /* ConfirmaIDViewController.swift in Sources */,
 				71454017242FDC75009185B6 /* comoJogarViewController.swift in Sources */,
 				718554CD243B66F100AECBD1 /* TableViewCell.swift in Sources */,
 				71454015242F3ACB009185B6 /* CreditosViewController.swift in Sources */,
 				718554D1243CA72B00AECBD1 /* PerguntasViewController.swift in Sources */,
+				71589C6F243EAB3D00EFBEFA /* DAO.swift in Sources */,
 				718554DA243D674700AECBD1 /* Perguntas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

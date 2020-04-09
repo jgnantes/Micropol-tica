@@ -12,6 +12,9 @@ class PerguntasViewController: UIViewController, UITableViewDelegate, UITableVie
     
     var tipos: [String] = []
     var vetorPerguntas: [Perguntas] = []
+    var receptor = 0
+    
+    var jogadorAtual:Jogador = jogadores[DAO.instance.indJogadorAtual]
     
     @IBOutlet weak var TableViewPerguntas: UITableView!
     @IBOutlet weak var BotaoTerminei: UIButton!
@@ -19,6 +22,7 @@ class PerguntasViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBAction func TermineiAcao(_ sender: UIButton) {
         if contador < jogadores.count{
             contador += 1
+            DAO.instance.indJogadorAtual += 1
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "ConfirmaID")
@@ -26,22 +30,14 @@ class PerguntasViewController: UIViewController, UITableViewDelegate, UITableVie
         }
             
         else {
+            DAO.instance.indJogadorAtual = 0
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "Imagens")
             self.navigationController?.pushViewController(controller, animated: true)
         }
         
-        
     }
     
-    
-    func perguntArray(pergunta: Perguntas, vetor: [Perguntas]) -> [Perguntas] {
-        var vetor2 = vetor
-        
-        vetor2.append(pergunta)
-        
-        return vetor2
-    }
     
     
     func vetorTipos(dicionario: [String: [String]]) -> [String] {
@@ -77,14 +73,8 @@ class PerguntasViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celula = tableView.dequeueReusableCell(withIdentifier: "celula") as! PerguntasTableViewCell
         
-        if tipos.count > 0 {
-            var gabarito = pegaPerguntas(dicionario: PerguntasDIC, tipos: tipos)
-            tipos = gabarito.vetor
-            vetorPerguntas = perguntArray(pergunta: gabarito.classe, vetor: vetorPerguntas)
-            celula.PerguntaOTL.text = "\(indexPath.row + 1). " + gabarito.classe.texto
-            
-            
-        }
+        celula.decorate(from:jogadorAtual, indPergunta:indexPath.row)
+
         
         return celula
     }
@@ -97,8 +87,9 @@ class PerguntasViewController: UIViewController, UITableViewDelegate, UITableVie
         self.navigationItem.hidesBackButton = true
         
         BotaoTerminei.layer.borderWidth = 1
-        BotaoTerminei.layer.borderColor = UIColor.black.cgColor
+        BotaoTerminei.layer.borderColor = UIColor.lightGray.cgColor
         BotaoTerminei.layer.cornerRadius = 5
+        BotaoTerminei.setTitleColor(.lightGray, for: .normal)
         
         tipos = vetorTipos(dicionario: PerguntasDIC)
         

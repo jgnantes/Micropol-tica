@@ -21,7 +21,7 @@ class Perguntas{
     }
 }
 
-var PerguntasDIC: [String: [String]] = ["preocupacaoEmpatica": ["Pergunta feita para qualquer um nos moldes de empatia 1.", "Pergunta para teste de aleatoriedade do tipo de empatia 1.", "Percebo que talvez fique sem ideias para a proxima pergunta de teste de empatia 1.", "Me pergunto quantas perguntas de teste são necessárias para o tipo de empatia 1.", "Apenas outra pergunta referente ao tipo de empatia 1.", "Creio que essa é a última pergunta referente ao tipo de empatia 1.", "Parece que os enganei, pois aqui vai mais uma pergunta referente ao tipo de empatia 1."],
+let PerguntasDIC: [String: [String]] = ["preocupacaoEmpatica": ["Pergunta feita para qualquer um nos moldes de empatia 1.", "Pergunta para teste de aleatoriedade do tipo de empatia 1.", "Percebo que talvez fique sem ideias para a proxima pergunta de teste de empatia 1.", "Me pergunto quantas perguntas de teste são necessárias para o tipo de empatia 1.", "Apenas outra pergunta referente ao tipo de empatia 1.", "Creio que essa é a última pergunta referente ao tipo de empatia 1.", "Parece que os enganei, pois aqui vai mais uma pergunta referente ao tipo de empatia 1."],
                                         
     "personalDistress": ["Pergunta feita para qualquer um nos moldes de empatia 2.", "Pergunta para teste de aleatoriedade do tipo de empatia 2.", "Percebo que talvez fique sem ideias para a proxima pergunta de teste de empatia 2.", "Me pergunto quantas perguntas de teste são necessárias para o tipo de empatia 2.", "Apenas outra pergunta referente ao tipo de empatia 2.", "Creio que essa é a última pergunta referente ao tipo de empatia 2.", "Parece que os enganei, pois aqui vai mais uma pergunta referente ao tipo de empatia 2."],
     
