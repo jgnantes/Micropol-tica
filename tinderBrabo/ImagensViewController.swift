@@ -77,7 +77,7 @@ class ImagensViewController: UIViewController, UICollectionViewDelegate, UIColle
                 oito = item.resposta
             }
         }
-        Generate(gerarView: self.view,primPerg: um,segPerg:dois,terPerg:tres,quarPerg:quatro,quinPerg:cinco,sexPerg:seis,setPerg:sete,oitPerg:oito)
+        Generate(gerarView: imagem.imagemTeste,primPerg: um,segPerg:dois,terPerg:tres,quarPerg:quatro,quinPerg:cinco,sexPerg:seis,setPerg:sete,oitPerg:oito)
         //jogadores[0].respostas.
         
         
