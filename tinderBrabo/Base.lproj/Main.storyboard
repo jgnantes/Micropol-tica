@@ -323,7 +323,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="335" height="389"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="389" id="hJ0-kG-5Dc"/>
+                                                        <constraint firstAttribute="height" constant="550" id="hJ0-kG-5Dc"/>
                                                         <constraint firstAttribute="width" constant="335" id="ppH-0d-afA"/>
                                                     </constraints>
                                                 </view>
