@@ -12,6 +12,14 @@ import SpriteKit
 class ImagensViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource
 {
     
+    var um: Int = 0
+    var dois: Int = 0
+    var tres: Int = 0
+    var quatro: Int = 0
+    var cinco: Int = 0
+    var seis: Int = 0
+    var sete: Int = 0
+    var oito: Int = 0
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -42,15 +50,6 @@ class ImagensViewController: UIViewController, UICollectionViewDelegate, UIColle
         imagem.imagemTeste.layer.borderWidth = 1
         imagem.imagemTeste.layer.borderColor = UIColor.black.cgColor
         imagem.imagemTeste.layer.cornerRadius = 15
-        
-        var um: Int = 0
-        var dois: Int = 0
-        var tres: Int = 0
-        var quatro: Int = 0
-        var cinco: Int = 0
-        var seis: Int = 0
-        var sete: Int = 0
-        var oito: Int = 0
         
         for item in jogadores[indexPath.row].respostas {
             if item.tipo == "preocupacaoEmpatica"{
