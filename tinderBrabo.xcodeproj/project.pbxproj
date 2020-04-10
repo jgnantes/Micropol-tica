@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E452F992440EEC600CCACC0 /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1E452F982440EEC600CCACC0 /* MyParticle.sks */; };
+		1E452F9B2440F60B00CCACC0 /* ImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E452F9A2440F60B00CCACC0 /* ImageGenerator.swift */; };
 		71453FFF242E9593009185B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71453FFE242E9593009185B6 /* AppDelegate.swift */; };
 		71454001242E9593009185B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71454000242E9593009185B6 /* SceneDelegate.swift */; };
 		71454003242E9593009185B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71454002242E9593009185B6 /* ViewController.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E452F982440EEC600CCACC0 /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle.sks; sourceTree = "<group>"; };
+		1E452F9A2440F60B00CCACC0 /* ImageGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGenerator.swift; sourceTree = "<group>"; };
 		71453FFB242E9592009185B6 /* tinderBrabo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tinderBrabo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71453FFE242E9593009185B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71454000242E9593009185B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +65,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E452F972440EE5A00CCACC0 /* GeracaoImagem */ = {
+			isa = PBXGroup;
+			children = (
+				1E452F982440EEC600CCACC0 /* MyParticle.sks */,
+				1E452F9A2440F60B00CCACC0 /* ImageGenerator.swift */,
+			);
+			path = GeracaoImagem;
+			sourceTree = "<group>";
+		};
 		71453FF2242E9592009185B6 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +93,7 @@
 		71453FFD242E9592009185B6 /* tinderBrabo */ = {
 			isa = PBXGroup;
 			children = (
+				1E452F972440EE5A00CCACC0 /* GeracaoImagem */,
 				71453FFE242E9593009185B6 /* AppDelegate.swift */,
 				71454016242FDC75009185B6 /* comoJogarViewController.swift */,
 				718554CE243BEDE300AECBD1 /* ConfirmaIDViewController.swift */,
@@ -172,6 +186,7 @@
 				7145400B242E9598009185B6 /* LaunchScreen.storyboard in Resources */,
 				71454008242E9598009185B6 /* Assets.xcassets in Resources */,
 				71454006242E9593009185B6 /* Main.storyboard in Resources */,
+				1E452F992440EEC600CCACC0 /* MyParticle.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +206,7 @@
 				71454001242E9593009185B6 /* SceneDelegate.swift in Sources */,
 				718554D8243D64AF00AECBD1 /* Jogador.swift in Sources */,
 				718554CF243BEDE300AECBD1 /* ConfirmaIDViewController.swift in Sources */,
+				1E452F9B2440F60B00CCACC0 /* ImageGenerator.swift in Sources */,
 				71454017242FDC75009185B6 /* comoJogarViewController.swift in Sources */,
 				718554CD243B66F100AECBD1 /* TableViewCell.swift in Sources */,
 				71454015242F3ACB009185B6 /* CreditosViewController.swift in Sources */,

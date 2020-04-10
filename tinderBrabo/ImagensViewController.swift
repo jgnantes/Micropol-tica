@@ -48,6 +48,8 @@ class ImagensViewController: UIViewController, UICollectionViewDelegate, UIColle
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
         
+        //ImageGenerator.Generate(gerarView: self.view,primPerg: 1,segPerg:1,terPerg:1,quarPerg:1,quinPerg:1,sexPerg:1,setPerg:1,oitPerg:1)
+        
     }
     
 
