@@ -319,36 +319,25 @@
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="530"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OVj-Ie-ctq">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmN-ZQ-5lr">
                                                     <rect key="frame" x="0.0" y="0.0" width="335" height="389"/>
-                                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="389" id="ENC-Yo-9SA"/>
-                                                        <constraint firstAttribute="width" constant="335" id="vwZ-Kr-f6h"/>
+                                                        <constraint firstAttribute="height" constant="389" id="hJ0-kG-5Dc"/>
+                                                        <constraint firstAttribute="width" constant="335" id="ppH-0d-afA"/>
                                                     </constraints>
-                                                </imageView>
-                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u0h-1q-0hW">
-                                                    <rect key="frame" x="84" y="401" width="167" height="129"/>
-                                                    <connections>
-                                                        <outlet property="dataSource" destination="hce-WC-FmU" id="lF3-Ru-UCH"/>
-                                                        <outlet property="delegate" destination="hce-WC-FmU" id="hyP-CC-ZXa"/>
-                                                    </connections>
-                                                </pickerView>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="u0h-1q-0hW" firstAttribute="top" secondItem="OVj-Ie-ctq" secondAttribute="bottom" constant="12" id="5vm-4N-J3l"/>
-                                                <constraint firstItem="OVj-Ie-ctq" firstAttribute="leading" secondItem="uR7-rY-dh4" secondAttribute="leading" id="6cj-2k-Ppf"/>
-                                                <constraint firstAttribute="trailing" secondItem="OVj-Ie-ctq" secondAttribute="trailing" id="Ai7-tT-UVe"/>
-                                                <constraint firstAttribute="bottom" secondItem="OVj-Ie-ctq" secondAttribute="bottom" constant="141" id="I8B-BA-k08"/>
-                                                <constraint firstAttribute="bottom" secondItem="u0h-1q-0hW" secondAttribute="bottom" id="WII-1z-r0b"/>
-                                                <constraint firstItem="OVj-Ie-ctq" firstAttribute="top" secondItem="uR7-rY-dh4" secondAttribute="top" id="u5G-0m-6Lz"/>
-                                                <constraint firstItem="u0h-1q-0hW" firstAttribute="width" secondItem="uR7-rY-dh4" secondAttribute="width" multiplier="0.498507" id="vV8-5y-RxY"/>
-                                                <constraint firstItem="u0h-1q-0hW" firstAttribute="leading" secondItem="uR7-rY-dh4" secondAttribute="leading" constant="84" id="yCB-oY-cog"/>
+                                                <constraint firstAttribute="trailing" secondItem="zmN-ZQ-5lr" secondAttribute="trailing" id="8FL-g5-WLV"/>
+                                                <constraint firstAttribute="bottom" secondItem="zmN-ZQ-5lr" secondAttribute="bottom" constant="141" id="9Mx-Do-2mK"/>
+                                                <constraint firstItem="zmN-ZQ-5lr" firstAttribute="top" secondItem="uR7-rY-dh4" secondAttribute="top" id="oEG-2S-Bhc"/>
+                                                <constraint firstItem="zmN-ZQ-5lr" firstAttribute="leading" secondItem="uR7-rY-dh4" secondAttribute="leading" id="tP6-do-vDQ"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="335" height="530"/>
                                         <connections>
-                                            <outlet property="imagemTeste" destination="OVj-Ie-ctq" id="GnG-mm-zYm"/>
+                                            <outlet property="imagemTeste" destination="zmN-ZQ-5lr" id="fIn-m6-4nm"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
