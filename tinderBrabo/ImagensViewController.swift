@@ -11,6 +11,8 @@ import SpriteKit
 
 class ImagensViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource
 {
+    
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -34,6 +36,7 @@ class ImagensViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let imagem = collectionView.dequeueReusableCell(withReuseIdentifier: "imagemCelula", for: indexPath) as! CollectionViewCell
         
         imagem.imagemTeste.layer.borderWidth = 1
@@ -77,6 +80,8 @@ class ImagensViewController: UIViewController, UICollectionViewDelegate, UIColle
         }
         Generate(gerarView: self.view,primPerg: um,segPerg:dois,terPerg:tres,quarPerg:quatro,quinPerg:cinco,sexPerg:seis,setPerg:sete,oitPerg:oito)
         //jogadores[0].respostas.
+        
+        
         return imagem
     }
     
