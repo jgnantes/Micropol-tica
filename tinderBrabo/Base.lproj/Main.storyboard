@@ -294,7 +294,7 @@
             </objects>
             <point key="canvasLocation" x="3813.04347826087" y="-644.19642857142856"/>
         </scene>
-        <!--Imagens View Controller-->
+        <!--Qual imagem pertence a quem?-->
         <scene sceneID="XI6-73-1vU">
             <objects>
                 <viewController storyboardIdentifier="Imagens" id="hce-WC-FmU" customClass="ImagensViewController" customModule="tinderBrabo" customModuleProvider="target" sceneMemberID="viewController">
@@ -303,41 +303,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="D0W-De-MKD">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OwL-Dz-mMm">
-                                    <size key="itemSize" width="367" height="819"/>
+                                    <size key="itemSize" width="335" height="530"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imagemCelula" id="XhS-5b-IoS" customClass="CollectionViewCell" customModule="tinderBrabo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-0.5" width="367" height="819"/>
+                                        <rect key="frame" x="0.0" y="122" width="335" height="530"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uR7-rY-dh4">
-                                            <rect key="frame" x="0.0" y="0.0" width="367" height="819"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="530"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WdU-IL-1O4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="367" height="819"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OVj-Ie-ctq">
+                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="389"/>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="539" id="m1d-RB-2lk"/>
-                                                        <constraint firstAttribute="width" constant="324" id="xlo-id-hzw"/>
+                                                        <constraint firstAttribute="height" constant="389" id="ENC-Yo-9SA"/>
+                                                        <constraint firstAttribute="width" constant="335" id="vwZ-Kr-f6h"/>
                                                     </constraints>
                                                 </imageView>
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u0h-1q-0hW">
+                                                    <rect key="frame" x="84" y="401" width="167" height="129"/>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="hce-WC-FmU" id="lF3-Ru-UCH"/>
+                                                        <outlet property="delegate" destination="hce-WC-FmU" id="hyP-CC-ZXa"/>
+                                                    </connections>
+                                                </pickerView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="WdU-IL-1O4" secondAttribute="trailing" id="2m4-BQ-g2w"/>
-                                                <constraint firstItem="WdU-IL-1O4" firstAttribute="leading" secondItem="uR7-rY-dh4" secondAttribute="leading" id="HMg-2C-dts"/>
-                                                <constraint firstAttribute="bottom" secondItem="WdU-IL-1O4" secondAttribute="bottom" id="UW2-ro-3gT"/>
-                                                <constraint firstItem="WdU-IL-1O4" firstAttribute="top" secondItem="uR7-rY-dh4" secondAttribute="top" id="mZ2-bg-Tdb"/>
+                                                <constraint firstItem="u0h-1q-0hW" firstAttribute="top" secondItem="OVj-Ie-ctq" secondAttribute="bottom" constant="12" id="5vm-4N-J3l"/>
+                                                <constraint firstItem="OVj-Ie-ctq" firstAttribute="leading" secondItem="uR7-rY-dh4" secondAttribute="leading" id="6cj-2k-Ppf"/>
+                                                <constraint firstAttribute="trailing" secondItem="OVj-Ie-ctq" secondAttribute="trailing" id="Ai7-tT-UVe"/>
+                                                <constraint firstAttribute="bottom" secondItem="OVj-Ie-ctq" secondAttribute="bottom" constant="141" id="I8B-BA-k08"/>
+                                                <constraint firstAttribute="bottom" secondItem="u0h-1q-0hW" secondAttribute="bottom" id="WII-1z-r0b"/>
+                                                <constraint firstItem="OVj-Ie-ctq" firstAttribute="top" secondItem="uR7-rY-dh4" secondAttribute="top" id="u5G-0m-6Lz"/>
+                                                <constraint firstItem="u0h-1q-0hW" firstAttribute="width" secondItem="uR7-rY-dh4" secondAttribute="width" multiplier="0.498507" id="vV8-5y-RxY"/>
+                                                <constraint firstItem="u0h-1q-0hW" firstAttribute="leading" secondItem="uR7-rY-dh4" secondAttribute="leading" constant="84" id="yCB-oY-cog"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="367" height="819"/>
+                                        <size key="customSize" width="335" height="530"/>
                                         <connections>
-                                            <outlet property="imagemTeste" destination="WdU-IL-1O4" id="azh-n2-pK7"/>
+                                            <outlet property="imagemTeste" destination="OVj-Ie-ctq" id="GnG-mm-zYm"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -349,17 +360,18 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="sF9-a3-VjD" firstAttribute="trailing" secondItem="D0W-De-MKD" secondAttribute="trailing" id="0J6-A3-INE"/>
                             <constraint firstItem="D0W-De-MKD" firstAttribute="bottom" secondItem="sF9-a3-VjD" secondAttribute="bottom" id="R4U-dF-TVP"/>
                             <constraint firstItem="D0W-De-MKD" firstAttribute="leading" secondItem="sF9-a3-VjD" secondAttribute="leading" id="UaM-0L-5Hk"/>
-                            <constraint firstItem="D0W-De-MKD" firstAttribute="trailing" secondItem="sF9-a3-VjD" secondAttribute="trailing" id="thJ-TO-1s6"/>
                             <constraint firstItem="D0W-De-MKD" firstAttribute="top" secondItem="sF9-a3-VjD" secondAttribute="top" id="vDc-xk-MYJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sF9-a3-VjD"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Qual imagem pertence a quem?" id="eRN-eA-Ooa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r73-cl-z4O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4742.0289855072469" y="-644.19642857142856"/>
+            <point key="canvasLocation" x="5652.1739130434789" y="-644.19642857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -615,6 +627,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KDw-Lm-1dJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="957.97101449275374" y="99.776785714285708"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="muR-se-JJA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GsW-9q-a5g" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gGe-Yh-xHb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hce-WC-FmU" kind="relationship" relationship="rootViewController" id="76l-ev-782"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BcI-rV-wIF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4742.0289855072469" y="-644.19642857142856"/>
         </scene>
     </scenes>
     <resources>

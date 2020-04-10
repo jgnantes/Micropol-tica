@@ -8,8 +8,26 @@
 
 import UIKit
 
-class ImagensViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource
+class ImagensViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource
 {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return jogadores.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return jogadores[row].nome
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    }
+    
+    
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return DAO.instance.jogadores.count
     }
@@ -17,8 +35,6 @@ class ImagensViewController: UIViewController, UICollectionViewDelegate, UIColle
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let imagem = collectionView.dequeueReusableCell(withReuseIdentifier: "imagemCelula", for: indexPath) as! CollectionViewCell
         
-        //imagem.decoracao(from: jogadores[DAO.instance.indJogadorAtual])
-        imagem.imagemTeste.image = UIImage(named: "lucas")
         imagem.imagemTeste.layer.borderWidth = 1
         imagem.imagemTeste.layer.borderColor = UIColor.black.cgColor
         imagem.imagemTeste.layer.cornerRadius = 15
@@ -26,9 +42,11 @@ class ImagensViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.hidesBackButton = true
         
     }
     
