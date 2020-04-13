@@ -319,7 +319,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="530"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmN-ZQ-5lr">
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmN-ZQ-5lr">
                                                     <rect key="frame" x="0.0" y="0.0" width="335" height="389"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
@@ -327,10 +327,22 @@
                                                         <constraint firstAttribute="width" constant="335" id="ppH-0d-afA"/>
                                                     </constraints>
                                                 </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csx-JL-EQj">
+                                                    <rect key="frame" x="0.0" y="419" width="335" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="Pia-xv-PM8"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                    <color key="textColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Csx-JL-EQj" secondAttribute="trailing" id="3up-qu-3OI"/>
                                                 <constraint firstAttribute="trailing" secondItem="zmN-ZQ-5lr" secondAttribute="trailing" id="8FL-g5-WLV"/>
                                                 <constraint firstAttribute="bottom" secondItem="zmN-ZQ-5lr" secondAttribute="bottom" constant="141" id="9Mx-Do-2mK"/>
+                                                <constraint firstItem="Csx-JL-EQj" firstAttribute="top" secondItem="zmN-ZQ-5lr" secondAttribute="bottom" constant="30" id="Um2-8R-YrU"/>
+                                                <constraint firstItem="Csx-JL-EQj" firstAttribute="leading" secondItem="uR7-rY-dh4" secondAttribute="leading" id="YTm-qX-UEW"/>
                                                 <constraint firstItem="zmN-ZQ-5lr" firstAttribute="top" secondItem="uR7-rY-dh4" secondAttribute="top" id="oEG-2S-Bhc"/>
                                                 <constraint firstItem="zmN-ZQ-5lr" firstAttribute="leading" secondItem="uR7-rY-dh4" secondAttribute="leading" id="tP6-do-vDQ"/>
                                             </constraints>
@@ -338,6 +350,7 @@
                                         <size key="customSize" width="335" height="530"/>
                                         <connections>
                                             <outlet property="imagemTeste" destination="zmN-ZQ-5lr" id="fIn-m6-4nm"/>
+                                            <outlet property="labelCelula" destination="Csx-JL-EQj" id="A8H-3z-8pc"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -346,17 +359,36 @@
                                     <outlet property="delegate" destination="hce-WC-FmU" id="2mz-Vs-Ctj"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAM-qG-3j9">
+                                <rect key="frame" x="172" y="798" width="70" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="PPc-pa-NEG"/>
+                                    <constraint firstAttribute="height" constant="34" id="e5H-Aq-wxc"/>
+                                </constraints>
+                                <state key="normal" title="Revelar!">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="revelarAcao:" destination="hce-WC-FmU" eventType="touchUpInside" id="M2d-lR-oGs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="sF9-a3-VjD" firstAttribute="trailing" secondItem="D0W-De-MKD" secondAttribute="trailing" id="0J6-A3-INE"/>
+                            <constraint firstItem="sF9-a3-VjD" firstAttribute="bottom" secondItem="QAM-qG-3j9" secondAttribute="bottom" constant="30" id="AZk-Rk-AN3"/>
                             <constraint firstItem="D0W-De-MKD" firstAttribute="bottom" secondItem="sF9-a3-VjD" secondAttribute="bottom" id="R4U-dF-TVP"/>
                             <constraint firstItem="D0W-De-MKD" firstAttribute="leading" secondItem="sF9-a3-VjD" secondAttribute="leading" id="UaM-0L-5Hk"/>
+                            <constraint firstItem="QAM-qG-3j9" firstAttribute="centerX" secondItem="qny-k3-e0v" secondAttribute="centerX" id="W7v-hX-cZm"/>
                             <constraint firstItem="D0W-De-MKD" firstAttribute="top" secondItem="sF9-a3-VjD" secondAttribute="top" id="vDc-xk-MYJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sF9-a3-VjD"/>
                     </view>
                     <navigationItem key="navigationItem" title="Qual imagem pertence a quem?" id="eRN-eA-Ooa"/>
+                    <connections>
+                        <outlet property="collectionOTL" destination="D0W-De-MKD" id="xYk-JH-O4o"/>
+                        <outlet property="revelarBotao" destination="QAM-qG-3j9" id="YtL-AQ-aph"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r73-cl-z4O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -480,7 +512,7 @@
                                     <constraint firstAttribute="width" constant="120" id="GA1-Ur-g1i"/>
                                     <constraint firstAttribute="height" constant="120" id="Tx9-eQ-Vz1"/>
                                 </constraints>
-                                <state key="normal" title="jefferson" image="Screen Shot 2020-03-28 at 05.06.08"/>
+                                <state key="normal" title="jefferson" image="jefferson"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84i-se-YrC">
                                 <rect key="frame" x="147" y="344" width="120" height="120"/>
@@ -637,8 +669,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Screen Shot 2020-03-28 at 05.06.08" width="338" height="326"/>
         <image name="Screen Shot 2020-03-28 at 05.14.58" width="644" height="676"/>
+        <image name="jefferson" width="784" height="1001"/>
         <image name="lucas" width="809" height="809"/>
         <image name="perfil" width="900" height="900"/>
     </resources>

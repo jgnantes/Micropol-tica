@@ -21,6 +21,25 @@ class ImagensViewController: UIViewController, UICollectionViewDelegate, UIColle
     var sete: Int = 0
     var oito: Int = 0
     
+    var prova = false
+    
+    @IBOutlet weak var revelarBotao: UIButton!
+    @IBOutlet weak var collectionOTL: UICollectionView!
+    
+    
+    @IBAction func revelarAcao(_ sender: UIButton) {
+        if prova == false {
+            prova = true
+            revelarBotao.setTitle("Terminar", for: .normal)
+            collectionOTL.reloadData()
+        }
+        if prova == true {
+            
+        }
+    }
+    
+    
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -80,6 +99,9 @@ class ImagensViewController: UIViewController, UICollectionViewDelegate, UIColle
         Generate(gerarView: imagem.imagemTeste,primPerg: um,segPerg:dois,terPerg:tres,quarPerg:quatro,quinPerg:cinco,sexPerg:seis,setPerg:sete,oitPerg:oito)
         //jogadores[0].respostas.
         
+        if prova == true {
+            imagem.labelCelula.textColor = UIColor(named: "black")
+        }
         
         return imagem
     }
@@ -91,6 +113,10 @@ class ImagensViewController: UIViewController, UICollectionViewDelegate, UIColle
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
         
+        revelarBotao.layer.cornerRadius = 5
+        revelarBotao.layer.borderWidth = 1
+        revelarBotao.layer.borderColor = UIColor.black.cgColor
+        revelarBotao.layer.backgroundColor = UIColor.white.cgColor
         
     }
     

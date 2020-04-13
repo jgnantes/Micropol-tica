@@ -13,6 +13,7 @@ class CollectionViewCell: UICollectionViewCell {
     var indJogadorAtual: Int = DAO.instance.indJogadorAtual
     
     @IBOutlet weak var imagemTeste: UIView!
+    @IBOutlet weak var labelCelula: UILabel!
     
     
     var jogadorAtual: Jogador = jogadores[DAO.instance.indJogadorAtual]

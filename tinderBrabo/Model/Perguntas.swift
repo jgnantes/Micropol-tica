@@ -10,7 +10,7 @@ import Foundation
 
 // Cria um dicionário pra acomodar as perguntas e separar por seus respctivos tipos.
 
-class Perguntas{
+struct Perguntas{
     var texto: String
     var tipo: String
     var resposta: Int = 1
