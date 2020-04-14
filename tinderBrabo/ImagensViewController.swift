@@ -138,6 +138,7 @@ class ImagensViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         //2)Nível de zigzag / Vel de Rotacao - 1/6
         let rotationSpeed = [0,0.05,0.1,0.3,0.5,0.7]
+        let speed = [0.2,0.5,0.8,1,1.5,2]
         
         //3)Background Color - 1/6
         
@@ -187,27 +188,27 @@ class ImagensViewController: UIViewController, UICollectionViewDelegate, UIColle
             
             
             particles.particleScaleSpeed = 0
-            particles.particleSpeed = 0.2
+            
             //particles.particleRotationRange = 10
             particles.particleSpeedRange = 0
-            particles.particleLifetime = 99999999999999999
+            particles.particleLifetime = 10
             particles.particleLifetimeRange = 0
             //particles.particleAlphaSequence = SKKeyframeSequence(keyframeValues: [0, 1, 1, 0],times: [0, 0.1, 0.8, 1])
 
             //SATURACAO - SEXTA PERGUNTA
-            let newColors = [UIColor(hue: 0.67, saturation: 0.945 - CGFloat(saturation[sexPerg-1]), brightness: 1, alpha: 1),
-            UIColor(hue: 0.67, saturation: 0.7 - CGFloat(saturation[sexPerg-1]), brightness: 0.8, alpha: 1),
-            UIColor(hue: 0.666, saturation: 0.281 - CGFloat(saturation[sextaPergunta-1]), brightness: 0.6, alpha: 1),
-            UIColor(hue: 0.17, saturation: 0.35 - CGFloat(saturation[sexPerg-1]), brightness: 0.61, alpha: 1),
-            UIColor(hue: 0.17, saturation: 0.75 - CGFloat(saturation[sexPerg-1]), brightness: 0.81, alpha: 1),
-            UIColor(hue: 0.17, saturation: 1 - CGFloat(saturation[sexPerg-1]), brightness: 1, alpha: 1)]
+            let newColors = [UIColor(hue: 241/360, saturation: 0.95 - CGFloat(saturation[sexPerg-1]), brightness: 1, alpha: 1),
+            UIColor(hue: 201/360, saturation: 0.95 - CGFloat(saturation[sexPerg-1]), brightness: 0.91, alpha: 1),
+            UIColor(hue: 178/360, saturation: 1 - CGFloat(saturation[sextaPergunta-1]), brightness: 1, alpha: 1),
+            UIColor(hue: 159/360, saturation: 1 - CGFloat(saturation[sexPerg-1]), brightness: 1, alpha: 1),
+            UIColor(hue: 115/360, saturation: 0.96 - CGFloat(saturation[sexPerg-1]), brightness: 0.91, alpha: 1),
+            UIColor(hue: 62/360, saturation: 1 - CGFloat(saturation[sexPerg-1]), brightness: 0.98, alpha: 1)]
             
-            let newColorsAlternative = [UIColor(hue: 0.67, saturation: 0.945 - CGFloat(saturation[sexPerg-1]), brightness: 0.8, alpha: 1),
-            UIColor(hue: 0.67, saturation: 0.7 - CGFloat(saturation[sexPerg-1]), brightness: 0.6, alpha: 1),
-            UIColor(hue: 0.666, saturation: 0.281 - CGFloat(saturation[sexPerg-1]), brightness: 0.4, alpha: 1),
-            UIColor(hue: 0.17, saturation: 0.35 - CGFloat(saturation[sexPerg-1]), brightness: 0.41, alpha: 1),
-            UIColor(hue: 0.17, saturation: 0.75 - CGFloat(saturation[sexPerg-1]), brightness: 0.61, alpha: 1),
-            UIColor(hue: 0.17, saturation: 1 - CGFloat(saturation[sexPerg-1]), brightness: 0.8, alpha: 1)]
+            let newColorsAlternative = [UIColor(hue: 241/360, saturation: 0.95 - CGFloat(saturation[sexPerg-1]), brightness: 0.8, alpha: 1),
+            UIColor(hue: 201/360, saturation: 0.95 - CGFloat(saturation[sexPerg-1]), brightness: 0.71, alpha: 1),
+            UIColor(hue: 178/360, saturation: 1 - CGFloat(saturation[sextaPergunta-1]), brightness: 0.8, alpha: 1),
+            UIColor(hue: 159/360, saturation: 1 - CGFloat(saturation[sexPerg-1]), brightness: 0.8, alpha: 1),
+            UIColor(hue: 115/360, saturation: 0.96 - CGFloat(saturation[sexPerg-1]), brightness: 0.71, alpha: 1),
+            UIColor(hue: 62/360, saturation: 1 - CGFloat(saturation[sexPerg-1]), brightness: 0.78, alpha: 1)]
             
             //QUANTIDADE DE OBJ - PRIMEIRA PERGUNTA
             particles.particleBirthRate = 10
@@ -217,6 +218,7 @@ class ImagensViewController: UIViewController, UICollectionViewDelegate, UIColle
             
             //ZIG ZAG - SEGUNDA PERGUNTA
             particles.particleRotationSpeed = CGFloat(rotationSpeed[segPerg-1])
+            particles.particleSpeed = CGFloat(speed[segPerg-1])
             
             //BACKGROUND COLOR - TERCEIRA PERGUNTA
             //schene.backgroundColor = colors[terceiraPergunta-1]
