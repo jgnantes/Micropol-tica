@@ -138,7 +138,7 @@ class ImagensViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         //2)Nível de zigzag / Vel de Rotacao - 1/6
         let rotationSpeed = [0,0.05,0.1,0.3,0.5,0.7]
-        let speed = [0.2,0.5,0.8,1,1.5,2]
+        let speed = [0.5,1,2,3,4,5]
         
         //3)Background Color - 1/6
         
@@ -193,7 +193,7 @@ class ImagensViewController: UIViewController, UICollectionViewDelegate, UIColle
             particles.particleSpeedRange = 0
             particles.particleLifetime = 10
             particles.particleLifetimeRange = 0
-            //particles.particleAlphaSequence = SKKeyframeSequence(keyframeValues: [0, 1, 1, 0],times: [0, 0.1, 0.8, 1])
+            particles.particleAlphaSequence = SKKeyframeSequence(keyframeValues: [0, 1, 1, 0],times: [0, 0.01, 0.95, 1])
 
             //SATURACAO - SEXTA PERGUNTA
             let newColors = [UIColor(hue: 241/360, saturation: 0.95 - CGFloat(saturation[sexPerg-1]), brightness: 1, alpha: 1),
@@ -211,10 +211,10 @@ class ImagensViewController: UIViewController, UICollectionViewDelegate, UIColle
             UIColor(hue: 62/360, saturation: 1 - CGFloat(saturation[sexPerg-1]), brightness: 0.78, alpha: 1)]
             
             //QUANTIDADE DE OBJ - PRIMEIRA PERGUNTA
-            particles.particleBirthRate = 10
+            particles.particleBirthRate = CGFloat(quantidadeObj[primPerg-1])/4
             particles.particleScale = objScaleWidth[primPerg-1]
             //particles.particleScale = 0.5
-            particles.numParticlesToEmit = Int(quantidadeObj[primPerg-1])
+            //particles.numParticlesToEmit = Int(quantidadeObj[primPerg-1])
             
             //ZIG ZAG - SEGUNDA PERGUNTA
             particles.particleRotationSpeed = CGFloat(rotationSpeed[segPerg-1])
