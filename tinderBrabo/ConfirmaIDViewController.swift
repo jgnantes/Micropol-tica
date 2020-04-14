@@ -10,8 +10,6 @@ import UIKit
 
 //var cont = 0
 
-var contador = 1
-
 class ConfirmaIDViewController: UIViewController {
     
     @IBOutlet weak var ConfirmaImagem: UIImageView!
@@ -34,7 +32,7 @@ class ConfirmaIDViewController: UIViewController {
         ConfirmaImagem.layer.borderWidth = 1
         ConfirmaImagem.layer.borderColor = UIColor.black.cgColor
         
-        ConfirmaJogador.text = jogadores[contador - 1].nome
+        ConfirmaJogador.text = jogadores[DAO.instance.indJogadorAtual].nome
         
     }
 

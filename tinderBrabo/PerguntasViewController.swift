@@ -21,8 +21,7 @@ class PerguntasViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var BotaoTerminei: UIButton!
     
     @IBAction func TermineiAcao(_ sender: UIButton) {
-        if contador < jogadores.count{
-            contador += 1
+        if DAO.instance.indJogadorAtual + 1 < jogadores.count{
             DAO.instance.indJogadorAtual += 1
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
