@@ -108,6 +108,7 @@ class ImagensViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         if prova == true {
             imagem.labelCelula.textColor = UIColor(named: "black")
+            imagem.labelCelula.text = jogadores[indexPath.item].nome
         }
         
         return imagem
@@ -171,7 +172,7 @@ class ImagensViewController: UIViewController, UICollectionViewDelegate, UIColle
                 //Cena apresentada na SKView
                 let schene = SKScene()
                 schene.addChild(particles)
-                schene.scaleMode = .resizeFill
+            schene.scaleMode = .resizeFill
                 //SKCiew criada e adicionada a view principal
                 let skView = SKView()
                 skView.frame = gerarView.frame
