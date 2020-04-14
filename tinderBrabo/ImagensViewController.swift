@@ -242,8 +242,8 @@ class ImagensViewController: UIViewController, UICollectionViewDelegate, UIColle
             
             //HUE RANGE - SETIMA PERGUNTA
             particles.particleColorRedRange = CGFloat(hueRange[setPerg-1])
-            //particles.particleColorGreenRange = CGFloat(hueRange[oitavaPergunta-1])
-            //particles.particleColorBlueRange = CGFloat(hueRange[oitavaPergunta-1])
+            particles.particleColorGreenRange = CGFloat(hueRange[setPerg-1])
+            particles.particleColorBlueRange = CGFloat(hueRange[setPerg-1])
             
             //DIRECAO DOS OBJ - OITAVA PERGUNTA
             particles.particleRotationRange = CGFloat(direcao[oitPerg-1])
