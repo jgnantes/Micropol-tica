@@ -33,8 +33,15 @@ class ImagensViewController: UIViewController, UICollectionViewDelegate, UIColle
             revelarBotao.setTitle("Terminar", for: .normal)
             collectionOTL.reloadData()
         }
-        if prova == true {
-            
+        else if prova == true {
+            let alert = UIAlertController(title: "Fim da rodada", message: "Deseja começar um novo round ou ir para a tela de menu?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Novo round", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+            }))
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Menu", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+            }))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
