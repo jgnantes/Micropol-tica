@@ -35,10 +35,10 @@ class ImagensViewController: UIViewController, UICollectionViewDelegate, UIColle
         }
         else if prova == true {
             let alert = UIAlertController(title: "Fim da rodada", message: "Deseja começar um novo round ou ir para a tela de menu?", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: NSLocalizedString("Novo round", comment: "Default action"), style: .default, handler: { _ in
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Menu", comment: "Default action"), style: .default, handler: { _ in
             NSLog("The \"OK\" alert occured.")
             }))
-            alert.addAction(UIAlertAction(title: NSLocalizedString("Menu", comment: "Default action"), style: .default, handler: { _ in
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Novo Round", comment: "Default action"), style: .default, handler: { _ in
             NSLog("The \"OK\" alert occured.")
             }))
             self.present(alert, animated: true, completion: nil)
