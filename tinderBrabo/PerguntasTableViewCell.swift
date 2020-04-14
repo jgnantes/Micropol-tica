@@ -14,6 +14,7 @@ class PerguntasTableViewCell: UITableViewCell {
     var jogadorAtual:Jogador = jogadores[DAO.instance.indJogadorAtual]
     
     @IBOutlet weak var PerguntaOTL: UILabel!
+	@IBOutlet weak var respostaOTL: UISegmentedControl!
     
     @IBAction func scChanged(_ sender: UISegmentedControl) {
 
@@ -24,6 +25,9 @@ class PerguntasTableViewCell: UITableViewCell {
         self.jogadorAtual = jogadorAtual
         self.indPergunta = indPergunta
         PerguntaOTL.text = jogadorAtual.respostas[indPergunta].texto
+		
+		respostaOTL.selectedSegmentIndex = jogadorAtual.respostas[indPergunta].resposta - 1
+		
     }
     
 }

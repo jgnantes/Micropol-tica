@@ -250,6 +250,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="PerguntaOTL" destination="lQM-yA-gxy" id="wYd-Si-ymb"/>
+                                            <outlet property="respostaOTL" destination="8Ym-9A-1dv" id="Hj9-rh-ScY"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
