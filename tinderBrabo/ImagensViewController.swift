@@ -130,31 +130,22 @@ class ImagensViewController: UIViewController, UICollectionViewDelegate, UIColle
     func Generate(gerarView: UIView,primPerg: Int,segPerg:Int,terPerg:Int,quarPerg:Int,quinPerg:Int,sexPerg:Int,setPerg:Int,oitPerg:Int){
     
         //1)Quantidade de objetos - 1/6
-        let primeiraPergunta = 2
-        
         let quantidadeObj = [3,6,12,24,32,60]
         
         let objScaleWidth:[CGFloat] = [1
         ,0.8,0.6,0.4,0.3,0.2]
         
         //2)Nível de zigzag / Vel de Rotacao - 1/6
-        let segundaPergunta = 6
-        
         let rotationSpeed = [0,0.05,0.1,0.3,0.5,0.7]
         
         //3)Background Color - 1/6
-        let terceiraPergunta = 1
-
-        //4)Forma dos objetos - 1/6
-        let quartaPergunta = 3
         
+        //4)Forma dos objetos - 1/6
         let nomesFormas : [String] = [
         "Triangle.png","Square.png","Pentagon.png","Octagon.png","Circle_Edges.png","Circle"
         ]
         
         //5)Distancia entre objetos - 1/6
-        let quintaPergunta = 5
-        
         let distancia = [20,50,100,150,200,250]
         
         //6)Saturacao - 1/6
@@ -163,13 +154,9 @@ class ImagensViewController: UIViewController, UICollectionViewDelegate, UIColle
         let saturation = [1,0.8,0.6,0.4,0.2,0]
         
         //7)Hue Range - 1/6
-        let setimaPergunta = 2
-        
         let hueRange = [0,0.1,0.3,0.5,0.75,0.9,1]
         
         //8)Direcao dos obj - 1/6
-        let oitavaPergunta = 6
-        
         let direcao = [0,45,90,180,270,360]
         
         
@@ -239,7 +226,7 @@ class ImagensViewController: UIViewController, UICollectionViewDelegate, UIColle
             particles.particleTexture = SKTexture(imageNamed: nomesFormas[quarPerg-1])
             
             //DISTANCIA ENTRE OBJ - QUINTA PERGUNTA
-            particles.particlePositionRange = CGVector(dx: distancia[quintaPergunta-1],dy: distancia[quinPerg-1])
+            particles.particlePositionRange = CGVector(dx: distancia[quinPerg-1],dy: distancia[quinPerg-1])
             
             //HUE RANGE - SETIMA PERGUNTA
             particles.particleColorRedRange = CGFloat(hueRange[setPerg-1])
